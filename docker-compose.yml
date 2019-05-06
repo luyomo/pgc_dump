@@ -1,0 +1,14 @@
+version: '2.0'
+services:
+  pg:
+    image: "pgc_dump_11.1"
+    ports:
+      - '15432:5432'
+    volumes:
+      - /opt/pg-docker-11/bin:/test
+    tty: true
+    networks:
+      infranet:
+
+networks:
+  infranet:
